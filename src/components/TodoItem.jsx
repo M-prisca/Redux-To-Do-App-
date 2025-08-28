@@ -38,22 +38,22 @@ const TodoItem = ({ todo }) => {
           onClick={handleSave}
           className="text-green-500 hover:text-green-700 ml-2"
         >
-          ✔
+          Save
         </button>
       ) : (
         <button
           onClick={() => setIsEditing(true)}
           className="text-blue-500 hover:text-blue-700 ml-2"
         >
-          ✎
+          Edit
         </button>
       )}
 
       <button
         onClick={() => dispatch(deleteTodo(todo.id))}
-        className="text-red-500 hover:text-red-700 ml-2"
+        className="text-red-500 hover:text-red-700 ml-4"
       >
-        ✕
+        Delete
       </button>
     </li>
   );
