@@ -11,7 +11,7 @@ The UI is designed like a **professional task manager table**, with columns for 
 
 ### Pic
 
-![Todo App](assets/image.png)
+![Todo App](./src/assets/image.png)
 
 ---
 
@@ -30,9 +30,9 @@ The UI is designed like a **professional task manager table**, with columns for 
 
 ## Table Layout
 
-| Task Actions                                                      |
-| ----------------------------------------------------------------- |
-| Displays todo text, Edit / Save / Delete buttons aligned properly |
+| Task Actions                             |
+| ---------------------------------------- |
+| Displays todo text, Edit / Save / Delete |
 
 ---
 
