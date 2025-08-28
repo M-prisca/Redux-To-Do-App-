@@ -15,47 +15,62 @@ const TodoItem = ({ todo }) => {
   };
 
   return (
-    <li className="flex justify-between items-center bg-white p-3 mb-2 rounded-lg shadow">
-      {isEditing ? (
-        <input
-          value={newText}
-          onChange={(e) => setNewText(e.target.value)}
-          className="border rounded px-2 py-1 flex-1 mr-2"
-        />
-      ) : (
-        <span
-          onClick={() => dispatch(toggleTodo(todo.id))}
-          className={`cursor-pointer flex-1 ${
-            todo.completed ? "line-through text-gray-400" : ""
-          }`}
-        >
-          {todo.text}
-        </span>
-      )}
+    <tr className="border-b hover:bg-gray-50">
+      {/* Task Column */}
+      <td className="px-4 py-2">
+        {isEditing ? (
+          <input
+            value={newText}
+            onChange={(e) => setNewText(e.target.value)}
+            className="border rounded px-2 py-1 w-full"
+          />
+        ) : (
+          <span
+            onClick={() => dispatch(toggleTodo(todo.id))}
+            className={`cursor-pointer ${
+              todo.completed ? "line-through text-gray-400" : "text-gray-800"
+            }`}
+          >
+            {todo.text}
+          </span>
+        )}
+      </td>
 
-      {isEditing ? (
-        <button
-          onClick={handleSave}
-          className="text-green-500 hover:text-green-700 ml-2"
-        >
-          Save
-        </button>
-      ) : (
-        <button
-          onClick={() => setIsEditing(true)}
-          className="text-blue-500 hover:text-blue-700 ml-2"
-        >
-          Edit
-        </button>
-      )}
+      {/* Status Column
+      <td className="px-4 py-2 text-center">
+        {todo.completed ? (
+          <span className="text-green-600 font-semibold">Done</span>
+        ) : (
+          <span className="text-yellow-500 font-semibold">Pending</span>
+        )}
+      </td> */}
 
-      <button
-        onClick={() => dispatch(deleteTodo(todo.id))}
-        className="text-red-500 hover:text-red-700 ml-4"
-      >
-        Delete
-      </button>
-    </li>
+      {/* Actions Column */}
+      <td className="px-4 py-2 text-right">
+        {isEditing ? (
+          <button
+            onClick={handleSave}
+            className="text-green-500 hover:text-green-700 mr-2"
+          >
+            Save
+          </button>
+        ) : (
+          <button
+            onClick={() => setIsEditing(true)}
+            className="text-blue-500 hover:text-blue-700 mr-2"
+          >
+            Edit
+          </button>
+        )}
+
+        <button
+          onClick={() => dispatch(deleteTodo(todo.id))}
+          className="text-red-500 hover:text-red-700"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
   );
 };
 
