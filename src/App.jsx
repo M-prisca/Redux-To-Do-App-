@@ -1,12 +1,11 @@
-import { useState } from "react";
 import "./index.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="flex flex-col items-center min-h-screen bg-gray-100 p-6">
+        <h1 className="text-3xl font-bold mb-4">Todo List</h1>
+      </div>
     </>
   );
 }
