@@ -13,13 +13,17 @@ The UI is designed like a **professional task manager table**, with columns for 
 
 ![Todo App](./src/assets/image.png)
 
+### Marked task complete
+
+![alt text](image.png)
+
 ---
 
 ## Features
 
 - Add new tasks
 - Edit existing tasks
-<!-- - Mark tasks as completed or pending -->
+- Mark tasks as completed
 - Delete tasks
 - Fully managed with **Redux global state**
 - Professional table layout design
@@ -30,9 +34,9 @@ The UI is designed like a **professional task manager table**, with columns for 
 
 ## Table Layout
 
-| Task Actions                             |
-| ---------------------------------------- |
-| Displays todo text, Edit / Save / Delete |
+| Task Actions                                       |
+| -------------------------------------------------- |
+| Mark complete,Displays tasks, Edit / Save / Delete |
 
 ---
 
